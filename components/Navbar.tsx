@@ -44,7 +44,7 @@ export default function Navbar() {
         {/* Logo */}
         <button
           onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="font-mono text-sm tracking-[0.2em] uppercase text-[#f0f0f0] hover:text-[#e8c77d] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+          className="font-mono text-sm tracking-[0.2em] uppercase text-[#f0f0f0] hover:text-[#10b981] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
           aria-label="Scroll to top"
         >
           {personal.name}
@@ -56,7 +56,7 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => scrollTo(link.href)}
-                className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+                className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
               >
                 {link.label}
               </button>
@@ -66,7 +66,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-[5px] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+          className="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-[5px] focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
           onClick={() => setMenuOpen(!menuOpen)}
           aria-expanded={menuOpen}
           aria-controls="mobile-menu"
@@ -103,7 +103,7 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => scrollTo(link.href)}
-                className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d] w-full text-left"
+                className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981] w-full text-left"
               >
                 {link.label}
               </button>

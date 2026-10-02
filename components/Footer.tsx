@@ -44,7 +44,7 @@ export default function Footer() {
                     href={href}
                     target={isEmail ? undefined : "_blank"}
                     rel={isEmail ? undefined : "noopener noreferrer"}
-                    className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+                    className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
                     aria-label={label}
                   >
                     {label}

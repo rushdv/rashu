@@ -34,7 +34,7 @@ export default function Hero() {
             e.preventDefault();
             document.getElementById("credentials")?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="font-mono text-[11px] uppercase tracking-[0.15em] px-5 py-3 border border-[#e8c77d] text-[#e8c77d] hover:bg-[#e8c77d] hover:text-[#0a0a0a] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
+          className="font-mono text-[11px] uppercase tracking-[0.15em] px-5 py-3 border border-[#10b981] text-[#10b981] hover:bg-[#10b981] hover:text-[#0a0a0a] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
         >
           View Credentials
         </a>
@@ -44,7 +44,7 @@ export default function Hero() {
             e.preventDefault();
             document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
           }}
-          className="font-mono text-[11px] uppercase tracking-[0.15em] px-5 py-3 border border-[#1f1f1f] text-[#6b7280] hover:border-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
+          className="font-mono text-[11px] uppercase tracking-[0.15em] px-5 py-3 border border-[#1f1f1f] text-[#6b7280] hover:border-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981] focus-visible:ring-offset-2 focus-visible:ring-offset-[#0a0a0a]"
         >
           Contact
         </a>

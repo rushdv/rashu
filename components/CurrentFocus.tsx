@@ -19,7 +19,7 @@ export default function CurrentFocus() {
       >
         {currentFocus.map((area) => (
           <li key={area}>
-            <span className="block font-mono text-[11px] px-4 py-2.5 border border-[#1f1f1f] text-[#6b7280] hover:border-[#e8c77d] hover:text-[#e8c77d] transition-colors duration-200 cursor-default">
+            <span className="block font-mono text-[11px] px-4 py-2.5 border border-[#1f1f1f] text-[#6b7280] hover:border-[#10b981] hover:text-[#10b981] transition-colors duration-200 cursor-default">
               {area}
             </span>
           </li>

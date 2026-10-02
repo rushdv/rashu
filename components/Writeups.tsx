@@ -23,7 +23,7 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
           </h3>
           <p
             className={`font-mono text-[10px] uppercase tracking-[0.12em] ${
-              ph(writeup.platform) ? "text-[#3a3a3a] italic" : "text-[#e8c77d]"
+              ph(writeup.platform) ? "text-[#3a3a3a] italic" : "text-[#10b981]"
             }`}
           >
             {writeup.platform}
@@ -38,7 +38,7 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
             href={writeup.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#e8c77d] hover:underline shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+            className="font-mono text-[10px] text-[#10b981] hover:underline shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`Read writeup: ${writeup.title} (opens in new tab)`}
           >
             Read →

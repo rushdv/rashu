@@ -4,7 +4,7 @@ import SectionHeader from "@/components/SectionHeader";
 function SkillBlock({ group }: { group: SkillGroup }) {
   return (
     <div className="border border-[#1f1f1f] bg-[#111111] p-5">
-      <h3 className="font-mono text-[10px] text-[#e8c77d] uppercase tracking-[0.15em] mb-4">
+      <h3 className="font-mono text-[10px] text-[#10b981] uppercase tracking-[0.15em] mb-4">
         {group.category}
       </h3>
       <ul className="space-y-2" role="list">

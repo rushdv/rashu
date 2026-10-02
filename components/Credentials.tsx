@@ -34,7 +34,7 @@ function CertCard({ cert }: { cert: Certification }) {
       </div>
 
       {/* Issuer */}
-      <p className="font-mono text-[10px] text-[#e8c77d] uppercase tracking-[0.15em] mb-3">
+      <p className="font-mono text-[10px] text-[#10b981] uppercase tracking-[0.15em] mb-3">
         {cert.issuer}
       </p>
 
@@ -54,7 +54,7 @@ function CertCard({ cert }: { cert: Certification }) {
             href={cert.credentialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#e8c77d] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${cert.name} credential (opens in new tab)`}
           >
             View Credential →
@@ -100,7 +100,7 @@ function CourseItem({ course }: { course: Course }) {
       </div>
       <p
         className={`font-mono text-[10px] uppercase tracking-[0.15em] mb-1 ${
-          providerPlaceholder ? "text-[#3a3a3a] italic" : "text-[#e8c77d]"
+          providerPlaceholder ? "text-[#3a3a3a] italic" : "text-[#10b981]"
         }`}
       >
         {course.provider}

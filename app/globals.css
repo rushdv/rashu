@@ -8,7 +8,7 @@
   --color-bg: #0a0a0a;
   --color-surface: #111111;
   --color-border: #1f1f1f;
-  --color-accent: #e8c77d;
+  --color-accent: #10b981;
   --color-text-primary: #f0f0f0;
   --color-text-secondary: #6b7280;
   --color-text-muted: #3a3a3a;
@@ -45,13 +45,13 @@ body {
 
 /* ─── Focus styles ──────────────────────────────────────── */
 :focus-visible {
-  outline: 1px solid #e8c77d;
+  outline: 1px solid #10b981;
   outline-offset: 2px;
 }
 
 /* ─── Text selection ────────────────────────────────────── */
 ::selection {
-  background-color: #e8c77d30;
+  background-color: #10b98130;
   color: #f0f0f0;
 }
 

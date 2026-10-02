@@ -25,7 +25,7 @@ function LabBlock({ lab }: { lab: Lab }) {
             href={lab.profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#e8c77d] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${lab.platform} profile (opens in new tab)`}
           >
             View Profile →

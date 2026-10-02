@@ -70,7 +70,7 @@ export default function Contact() {
                   href={href}
                   target={isEmail ? undefined : "_blank"}
                   rel={isEmail ? undefined : "noopener noreferrer"}
-                  className="font-mono text-xs text-[#f0f0f0] hover:text-[#e8c77d] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+                  className="font-mono text-xs text-[#f0f0f0] hover:text-[#10b981] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
                   aria-label={`${label}: ${display}`}
                 >
                   {display}

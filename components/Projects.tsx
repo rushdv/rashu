@@ -11,11 +11,11 @@ const statusConfig: Record<
 > = {
   Completed: {
     label: "Completed",
-    className: "text-[#5a9a72] border-[#1a3328]",
+    className: "text-[#10b981] border-[#064e3b]",
   },
   "In Progress": {
     label: "In Progress",
-    className: "text-[#e8c77d] border-[#3a3020]",
+    className: "text-[#34d399] border-[#065f46]",
   },
   Planned: {
     label: "Planned",
@@ -59,7 +59,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Domain */}
       <p
         className={`font-mono text-[10px] uppercase tracking-[0.15em] mb-3 ${
-          domainPlaceholder ? "text-[#3a3a3a] italic" : "text-[#e8c77d]"
+          domainPlaceholder ? "text-[#3a3a3a] italic" : "text-[#10b981]"
         }`}
       >
         {project.domain}
@@ -106,7 +106,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#e8c77d] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${project.name} on GitHub (opens in new tab)`}
           >
             GitHub →
@@ -117,7 +117,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#e8c77d]"
+            className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${project.name} demo (opens in new tab)`}
           >
             Demo →
