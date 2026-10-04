@@ -16,16 +16,16 @@ function CertCard({ cert }: { cert: Certification }) {
 
   return (
     <article
-      className="border border-[#1f1f1f] bg-[#111111] p-6 hover:border-[#2a2a2a] transition-colors duration-200 flex flex-col"
+      className="border border-[#1f1f1f] bg-[#111111] p-5 hover:border-[#2a2a2a] transition-colors duration-200 flex flex-col"
       aria-label={`${cert.name} — ${cert.issuer}`}
     >
       {/* Name + year */}
       <div className="flex items-start justify-between gap-3 mb-3">
-        <h3 className="font-semibold text-[#f0f0f0] text-sm leading-snug">
+        <h3 className="font-semibold text-[#f0f0f0] text-[15px] leading-snug">
           {cert.name}
         </h3>
         <span
-          className={`font-mono text-[10px] shrink-0 mt-0.5 ${
+          className={`font-mono text-xs shrink-0 mt-0.5 ${
             yearPlaceholder ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
           }`}
         >
@@ -34,19 +34,19 @@ function CertCard({ cert }: { cert: Certification }) {
       </div>
 
       {/* Issuer */}
-      <p className="font-mono text-[10px] text-[#10b981] uppercase tracking-[0.15em] mb-3">
+      <p className="font-mono text-[11px] text-[#10b981] font-medium uppercase tracking-[0.15em] mb-3">
         {cert.issuer}
       </p>
 
       {/* Description */}
-      <p className="text-xs text-[#6b7280] leading-relaxed flex-1 mb-4">
+      <p className="text-sm text-[#6b7280] leading-relaxed flex-1 mb-4">
         {cert.description}
       </p>
 
       {/* Footer */}
       <div className="flex items-center justify-between gap-3 pt-4 border-t border-[#1f1f1f]">
         {linkPlaceholder ? (
-          <span className="font-mono text-[10px] text-[#3a3a3a] italic">
+          <span className="font-mono text-xs text-[#3a3a3a] italic">
             Credential link pending
           </span>
         ) : (
@@ -54,7 +54,7 @@ function CertCard({ cert }: { cert: Certification }) {
             href={cert.credentialUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+            className="font-mono text-xs text-[#10b981] font-medium hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${cert.name} credential (opens in new tab)`}
           >
             View Credential →
@@ -62,7 +62,7 @@ function CertCard({ cert }: { cert: Certification }) {
         )}
         {cert.credentialId && (
           <span
-            className={`font-mono text-[10px] ${
+            className={`font-mono text-xs ${
               ph(cert.credentialId) ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
             }`}
           >
@@ -76,13 +76,12 @@ function CertCard({ cert }: { cert: Certification }) {
 
 function CourseItem({ course }: { course: Course }) {
   const namePlaceholder = ph(course.name);
-  const providerPlaceholder = ph(course.provider);
 
   return (
-    <li className="pl-4 border-l border-[#1f1f1f] py-1.5">
+    <li className="pl-4 border-l border-[#1f1f1f] py-2">
       <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
         <h3
-          className={`font-semibold text-sm ${
+          className={`font-semibold text-[15px] ${
             namePlaceholder ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
           }`}
         >
@@ -90,7 +89,7 @@ function CourseItem({ course }: { course: Course }) {
         </h3>
         {course.year && (
           <span
-            className={`font-mono text-[10px] shrink-0 ${
+            className={`font-mono text-xs shrink-0 ${
               ph(course.year) ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
             }`}
           >
@@ -98,15 +97,8 @@ function CourseItem({ course }: { course: Course }) {
           </span>
         )}
       </div>
-      <p
-        className={`font-mono text-[10px] uppercase tracking-[0.15em] mb-1 ${
-          providerPlaceholder ? "text-[#3a3a3a] italic" : "text-[#10b981]"
-        }`}
-      >
-        {course.provider}
-      </p>
       {course.note && (
-        <p className="text-xs text-[#6b7280] leading-relaxed mt-1">
+        <p className="text-sm text-[#6b7280] leading-relaxed mt-1">
           {course.note}
         </p>
       )}
@@ -129,7 +121,7 @@ export default function Credentials() {
 
       {/* Certifications */}
       <div className="mb-14">
-        <p className="font-mono text-[10px] text-[#6b7280] uppercase tracking-[0.15em] mb-6">
+        <p className="font-mono text-[11px] text-[#6b7280] uppercase tracking-[0.15em] mb-6">
           Certifications
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -141,10 +133,10 @@ export default function Credentials() {
 
       {/* Courses */}
       <div>
-        <p className="font-mono text-[10px] text-[#6b7280] uppercase tracking-[0.15em] mb-6">
+        <p className="font-mono text-[11px] text-[#6b7280] uppercase tracking-[0.15em] mb-6">
           Training &amp; Courses
         </p>
-        <ul className="space-y-5" role="list">
+        <ul className="space-y-6" role="list">
           {courses.map((course, i) => (
             <CourseItem key={i} course={course} />
           ))}

@@ -15,14 +15,14 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
       <div className="flex items-start justify-between gap-4 flex-wrap mb-2">
         <div className="flex-1 min-w-0">
           <h3
-            className={`font-semibold text-sm leading-snug mb-0.5 ${
+            className={`font-semibold text-[15px] leading-snug mb-1 ${
               titlePh ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
             }`}
           >
             {writeup.title}
           </h3>
           <p
-            className={`font-mono text-[10px] uppercase tracking-[0.12em] ${
+            className={`font-mono text-[11px] font-medium uppercase tracking-[0.12em] ${
               ph(writeup.platform) ? "text-[#3a3a3a] italic" : "text-[#10b981]"
             }`}
           >
@@ -30,7 +30,7 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
           </p>
         </div>
         {urlPh ? (
-          <span className="font-mono text-[10px] text-[#3a3a3a] italic shrink-0">
+          <span className="font-mono text-xs text-[#3a3a3a] italic shrink-0">
             Coming soon
           </span>
         ) : (
@@ -38,7 +38,7 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
             href={writeup.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#10b981] hover:underline shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+            className="font-mono text-xs text-[#10b981] font-medium hover:underline shrink-0 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`Read writeup: ${writeup.title} (opens in new tab)`}
           >
             Read →
@@ -47,32 +47,29 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
       </div>
 
       <div className="flex flex-wrap items-center gap-2">
-        {/* Category */}
         <span
-          className={`font-mono text-[10px] ${
+          className={`font-mono text-xs ${
             ph(writeup.category) ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
           }`}
         >
           {writeup.category}
         </span>
 
-        <span className="text-[#2a2a2a] font-mono text-[10px]" aria-hidden="true">
+        <span className="text-[#2a2a2a] font-mono text-xs" aria-hidden="true">
           ·
         </span>
 
-        {/* Date */}
         <span
-          className={`font-mono text-[10px] ${
+          className={`font-mono text-xs ${
             datePh ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
           }`}
         >
           {writeup.date}
         </span>
 
-        {/* Tags */}
         {writeup.tags.length > 0 && (
           <>
-            <span className="text-[#2a2a2a] font-mono text-[10px]" aria-hidden="true">
+            <span className="text-[#2a2a2a] font-mono text-xs" aria-hidden="true">
               ·
             </span>
             <div
@@ -82,7 +79,7 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
               {writeup.tags.map((tag) => (
                 <span
                   key={tag}
-                  className={`font-mono text-[10px] px-1.5 py-px border ${
+                  className={`font-mono text-[10px] px-2 py-0.5 border ${
                     ph(tag)
                       ? "border-[#1a1a1a] text-[#3a3a3a] italic"
                       : "border-[#1f1f1f] text-[#6b7280]"
@@ -108,7 +105,7 @@ export default function Writeups() {
     >
       <SectionHeader
         number="05"
-        title="Writeups &amp; Research Notes"
+        title="Writeups & Research Notes"
         subtitle="Security research notes, machine writeups, and lab documentation."
       />
       <ul role="list" className="border-t border-[#1f1f1f]">

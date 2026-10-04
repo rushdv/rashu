@@ -41,13 +41,13 @@ function ProjectCard({ project }: { project: Project }) {
 
   return (
     <article
-      className="border border-[#1f1f1f] bg-[#111111] p-6 hover:border-[#2a2a2a] transition-colors duration-200 flex flex-col"
+      className="border border-[#1f1f1f] bg-[#111111] p-5 hover:border-[#2a2a2a] transition-colors duration-200 flex flex-col"
       aria-label={namePlaceholder ? "Project placeholder" : project.name}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <h3
-          className={`font-semibold text-sm leading-snug ${
+          className={`font-semibold text-[15px] leading-snug ${
             namePlaceholder ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
           }`}
         >
@@ -58,7 +58,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Domain */}
       <p
-        className={`font-mono text-[10px] uppercase tracking-[0.15em] mb-3 ${
+        className={`font-mono text-[11px] font-medium uppercase tracking-[0.15em] mb-3 ${
           domainPlaceholder ? "text-[#3a3a3a] italic" : "text-[#10b981]"
         }`}
       >
@@ -67,7 +67,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Description */}
       <p
-        className={`text-xs leading-relaxed flex-1 mb-4 ${
+        className={`text-sm leading-relaxed flex-1 mb-4 ${
           ph(project.description) ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
         }`}
       >
@@ -77,7 +77,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Tools */}
       {project.tools.length > 0 && (
         <div
-          className="flex flex-wrap gap-1.5 mb-4"
+          className="flex flex-wrap gap-2 mb-4"
           aria-label="Tools and technologies"
         >
           {project.tools.map((tool) => (
@@ -98,7 +98,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Links */}
       <div className="flex items-center gap-5 pt-4 border-t border-[#1f1f1f]">
         {githubPlaceholder ? (
-          <span className="font-mono text-[10px] text-[#3a3a3a] italic">
+          <span className="font-mono text-xs text-[#3a3a3a] italic">
             Repository pending
           </span>
         ) : (
@@ -106,7 +106,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.githubUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+            className="font-mono text-xs text-[#10b981] font-medium hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${project.name} on GitHub (opens in new tab)`}
           >
             GitHub →
@@ -117,7 +117,7 @@ function ProjectCard({ project }: { project: Project }) {
             href={project.demoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+            className="font-mono text-xs text-[#6b7280] hover:text-[#f0f0f0] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${project.name} demo (opens in new tab)`}
           >
             Demo →
@@ -140,7 +140,7 @@ export default function Projects() {
         title="Projects"
         subtitle="Security tools, analysis environments, and research work. Add projects by editing /data/portfolio.ts."
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
         {projects.map((project, i) => (
           <ProjectCard key={i} project={project} />
         ))}

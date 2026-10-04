@@ -10,14 +10,14 @@ function LabBlock({ lab }: { lab: Lab }) {
 
   return (
     <article
-      className="border border-[#1f1f1f] bg-[#111111] p-6 hover:border-[#2a2a2a] transition-colors duration-200"
+      className="border border-[#1f1f1f] bg-[#111111] p-5 hover:border-[#2a2a2a] transition-colors duration-200"
       aria-label={`${lab.platform} practice profile`}
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-5 flex-wrap">
-        <h3 className="font-semibold text-[#f0f0f0] text-sm">{lab.platform}</h3>
+        <h3 className="font-semibold text-[#f0f0f0] text-[15px]">{lab.platform}</h3>
         {profilePlaceholder ? (
-          <span className="font-mono text-[10px] text-[#3a3a3a] italic">
+          <span className="font-mono text-xs text-[#3a3a3a] italic">
             Profile link pending
           </span>
         ) : (
@@ -25,7 +25,7 @@ function LabBlock({ lab }: { lab: Lab }) {
             href={lab.profileUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-[10px] text-[#10b981] hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+            className="font-mono text-xs text-[#10b981] font-medium hover:underline focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
             aria-label={`View ${lab.platform} profile (opens in new tab)`}
           >
             View Profile →
@@ -37,11 +37,11 @@ function LabBlock({ lab }: { lab: Lab }) {
       <dl className="space-y-2.5 mb-4">
         {lab.stats.map((stat) => (
           <div key={stat.label} className="flex items-baseline gap-3">
-            <dt className="font-mono text-[10px] text-[#6b7280] uppercase tracking-[0.12em] shrink-0 w-36">
+            <dt className="font-mono text-xs text-[#6b7280] uppercase tracking-[0.12em] shrink-0 w-36">
               {stat.label}
             </dt>
             <dd
-              className={`font-mono text-xs ${
+              className={`font-mono text-sm ${
                 ph(stat.value) ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
               }`}
             >
@@ -51,9 +51,8 @@ function LabBlock({ lab }: { lab: Lab }) {
         ))}
       </dl>
 
-      {/* Note */}
       {lab.note && (
-        <p className="text-xs text-[#6b7280] leading-relaxed border-t border-[#1f1f1f] pt-4">
+        <p className="text-sm text-[#6b7280] leading-relaxed border-t border-[#1f1f1f] pt-4">
           {lab.note}
         </p>
       )}
@@ -70,17 +69,17 @@ export default function Labs() {
     >
       <SectionHeader
         number="03"
-        title="Security Labs &amp; Practice"
+        title="Security Labs & Practice"
         subtitle="Hands-on practice through structured lab environments. Placeholder values will be updated as progress is documented."
       />
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
         {labs.map((lab) => (
           <LabBlock key={lab.platform} lab={lab} />
         ))}
       </div>
 
-      <p className="font-mono text-[10px] text-[#3a3a3a] mt-6">
+      <p className="font-mono text-xs text-[#3a3a3a] mt-6">
         * Bracketed values are placeholders. Update /data/portfolio.ts with actual statistics.
       </p>
     </section>

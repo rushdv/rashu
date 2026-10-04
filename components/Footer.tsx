@@ -25,18 +25,18 @@ export default function Footer() {
           <p className="font-mono text-sm text-[#f0f0f0] tracking-[0.1em]">
             {personal.name}
           </p>
-          <p className="font-mono text-[10px] text-[#6b7280] mt-0.5">
+          <p className="font-mono text-xs text-[#6b7280] mt-1">
             Cybersecurity · CSE Student
           </p>
         </div>
 
         {/* Links */}
         <nav aria-label="Footer navigation">
-          <ul className="flex flex-wrap gap-5" role="list">
+          <ul className="flex flex-wrap gap-6" role="list">
             {links.map(({ label, href, isEmail }) => (
               <li key={label}>
                 {ph(href) ? (
-                  <span className="font-mono text-[10px] text-[#3a3a3a] italic">
+                  <span className="font-mono text-xs text-[#3a3a3a] italic">
                     {label}
                   </span>
                 ) : (
@@ -44,7 +44,7 @@ export default function Footer() {
                     href={href}
                     target={isEmail ? undefined : "_blank"}
                     rel={isEmail ? undefined : "noopener noreferrer"}
-                    className="font-mono text-[10px] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+                    className="font-mono text-xs text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
                     aria-label={label}
                   >
                     {label}
@@ -56,7 +56,7 @@ export default function Footer() {
         </nav>
 
         {/* Year */}
-        <p className="font-mono text-[10px] text-[#3a3a3a]">© {year}</p>
+        <p className="font-mono text-xs text-[#3a3a3a]">© {year}</p>
       </div>
     </footer>
   );

@@ -12,12 +12,11 @@ export const personal = {
   meta: "CSE Student · Penetration Testing · Security Analysis",
   education: {
     degree: "BSc in Computer Science & Engineering",
-    institution: "Northern University Bangladesh",
   },
 };
 
 export const about = [
-  "I'm a Computer Science & Engineering student at Northern University Bangladesh with a focused interest in offensive and defensive security. My work centres on penetration testing techniques, SOC workflows, and malware analysis — areas I develop through structured lab practice rather than simulated exercises.",
+  "I'm a Computer Science & Engineering student with a focused interest in offensive and defensive security. My work centres on penetration testing techniques, SOC workflows, and malware analysis — areas I develop through structured lab practice rather than simulated exercises.",
   "Most of my learning happens hands-on: working through machines and challenges on Hack The Box, completing structured paths on TryHackMe, and building analysis tooling independently. I prefer evidence-based learning over passive study.",
   "I'm currently developing practical skills across web application security, network enumeration, incident handling, and malware analysis. My goal is to build a consistent, documented body of work that reflects genuine technical progress.",
 ];
@@ -56,7 +55,6 @@ export const certifications: Certification[] = [
 
 export type Course = {
   name: string;
-  provider: string;
   year?: string;
   note?: string;
 };
@@ -64,19 +62,16 @@ export type Course = {
 export const courses: Course[] = [
   {
     name: "Ethical Hacking for Professionals",
-    provider: "Byte Capsule",
     year: "[YEAR]",
     note: "Structured training covering penetration testing methodology, enumeration, and exploitation techniques.",
   },
   {
     name: "Cybersecurity Fundamentals",
-    provider: "Hack To Live",
     year: "[YEAR]",
     note: "Foundational cybersecurity concepts including networking, security principles, and threat modelling. Contributed to course coordination activities.",
   },
   {
     name: "[AWS SECURITY COURSE NAME — TO BE PROVIDED]",
-    provider: "AWS / [PROVIDER]",
     year: "[YEAR]",
     note: "Cloud security training covering AWS security services and configurations. Update with exact course name.",
   },
