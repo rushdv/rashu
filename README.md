@@ -4,7 +4,7 @@ A minimal, professional cybersecurity portfolio built with Next.js 16, Tailwind 
 
 ---
 
-## Project Structure 
+## Project Structure  
 
 ```
 rashu/
