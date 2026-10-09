@@ -21,7 +21,7 @@ function CertCard({ cert }: { cert: Certification }) {
     >
       {/* Name + year */}
       <div className="flex items-start justify-between gap-3 mb-3">
-        <h3 className="font-semibold text-[#f0f0f0] text-[15px] leading-snug">
+        <h3 className="font-semibold text-[#f0f0f0] text-base leading-snug">
           {cert.name}
         </h3>
         <span
@@ -34,12 +34,12 @@ function CertCard({ cert }: { cert: Certification }) {
       </div>
 
       {/* Issuer */}
-      <p className="font-mono text-[11px] text-[#10b981] font-medium uppercase tracking-[0.15em] mb-3">
+      <p className="font-mono text-xs text-[#10b981] font-medium uppercase tracking-[0.15em] mb-3">
         {cert.issuer}
       </p>
 
       {/* Description */}
-      <p className="text-sm text-[#6b7280] leading-relaxed flex-1 mb-4">
+      <p className="text-[15px] text-[#6b7280] leading-relaxed flex-1 mb-4">
         {cert.description}
       </p>
 
@@ -81,7 +81,7 @@ function CourseItem({ course }: { course: Course }) {
     <li className="pl-4 border-l border-[#1f1f1f] py-2">
       <div className="flex items-baseline justify-between gap-4 flex-wrap mb-1">
         <h3
-          className={`font-semibold text-[15px] ${
+          className={`font-semibold text-base ${
             namePlaceholder ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
           }`}
         >
@@ -98,7 +98,7 @@ function CourseItem({ course }: { course: Course }) {
         )}
       </div>
       {course.note && (
-        <p className="text-sm text-[#6b7280] leading-relaxed mt-1">
+        <p className="text-[15px] text-[#6b7280] leading-relaxed mt-1">
           {course.note}
         </p>
       )}

@@ -4,12 +4,12 @@ import SectionHeader from "@/components/SectionHeader";
 function SkillBlock({ group }: { group: SkillGroup }) {
   return (
     <div className="border border-[#1f1f1f] bg-[#111111] p-5">
-      <h3 className="font-mono text-[11px] font-semibold text-[#10b981] uppercase tracking-[0.15em] mb-4">
+      <h3 className="font-mono text-xs font-semibold text-[#10b981] uppercase tracking-[0.15em] mb-4">
         {group.category}
       </h3>
       <ul className="space-y-2.5" role="list">
         {group.items.map((item) => (
-          <li key={item} className="flex items-center gap-2.5 text-sm text-[#6b7280]">
+          <li key={item} className="flex items-center gap-2.5 text-[15px] text-[#6b7280]">
             <span
               className="w-1.5 h-1.5 rounded-full bg-[#10b981]/50 shrink-0"
               aria-hidden="true"

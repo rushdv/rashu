@@ -13,7 +13,7 @@ export default function SectionHeader({
     <div className="mb-10">
       <div className="flex items-baseline gap-3 mb-4">
         <span
-          className="font-mono text-[11px] text-[#10b981] tracking-[0.15em] select-none tabular-nums"
+          className="font-mono text-xs text-[#10b981] tracking-[0.15em] select-none tabular-nums"
           aria-hidden="true"
         >
           {number}
@@ -23,7 +23,7 @@ export default function SectionHeader({
         </h2>
       </div>
       {subtitle && (
-        <p className="text-sm text-[#6b7280] leading-relaxed mb-4 max-w-2xl">
+        <p className="text-[15px] text-[#6b7280] leading-relaxed mb-4 max-w-2xl">
           {subtitle}
         </p>
       )}

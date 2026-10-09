@@ -29,7 +29,7 @@ const TONE: Record<string, string> = {
   win: "text-[color:var(--accent,#00e5a0)]",
 };
 
-export default function HeroTerminal({ className = "w-full max-w-[540px] mx-auto" }: { className?: string }) {
+export default function HeroTerminal({ className = "w-full max-w-[540px] mx-autoaaah" }: { className?: string }) {
   const [line, setLine] = useState(0); // lines fully shown
   const [chars, setChars] = useState(0); // chars typed on current cmd line
 

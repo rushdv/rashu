@@ -15,7 +15,7 @@ function LabBlock({ lab }: { lab: Lab }) {
     >
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-5 flex-wrap">
-        <h3 className="font-semibold text-[#f0f0f0] text-[15px]">{lab.platform}</h3>
+        <h3 className="font-semibold text-[#f0f0f0] text-base">{lab.platform}</h3>
         {profilePlaceholder ? (
           <span className="font-mono text-xs text-[#3a3a3a] italic">
             Profile link pending
@@ -52,7 +52,7 @@ function LabBlock({ lab }: { lab: Lab }) {
       </dl>
 
       {lab.note && (
-        <p className="text-sm text-[#6b7280] leading-relaxed border-t border-[#1f1f1f] pt-4">
+        <p className="text-[15px] text-[#6b7280] leading-relaxed border-t border-[#1f1f1f] pt-4">
           {lab.note}
         </p>
       )}

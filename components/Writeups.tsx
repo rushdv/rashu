@@ -15,14 +15,14 @@ function WriteupEntry({ writeup }: { writeup: Writeup }) {
       <div className="flex items-start justify-between gap-4 flex-wrap mb-2">
         <div className="flex-1 min-w-0">
           <h3
-            className={`font-semibold text-[15px] leading-snug mb-1 ${
+            className={`font-semibold text-base leading-snug mb-1 ${
               titlePh ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
             }`}
           >
             {writeup.title}
           </h3>
           <p
-            className={`font-mono text-[11px] font-medium uppercase tracking-[0.12em] ${
+            className={`font-mono text-xs font-medium uppercase tracking-[0.12em] ${
               ph(writeup.platform) ? "text-[#3a3a3a] italic" : "text-[#10b981]"
             }`}
           >

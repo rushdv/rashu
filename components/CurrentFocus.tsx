@@ -9,7 +9,7 @@ export default function CurrentFocus() {
       aria-labelledby="focus-heading"
     >
       <SectionHeader number="07" title="Current Learning Focus" />
-      <p className="text-sm text-[#6b7280] mb-8 max-w-xl leading-relaxed">
+      <p className="text-[15px] text-[#6b7280] mb-8 max-w-xl leading-relaxed">
         Active areas of study and practice — not claimed professional expertise.
       </p>
       <ul
@@ -19,7 +19,7 @@ export default function CurrentFocus() {
       >
         {currentFocus.map((area) => (
           <li key={area}>
-            <span className="block font-mono text-xs font-medium px-4 py-2.5 border border-[#1f1f1f] text-[#6b7280] hover:border-[#10b981] hover:text-[#10b981] transition-colors duration-200 cursor-default">
+            <span className="block font-mono text-sm font-medium px-4 py-2.5 border border-[#1f1f1f] text-[#6b7280] hover:border-[#10b981] hover:text-[#10b981] transition-colors duration-200 cursor-default">
               {area}
             </span>
           </li>

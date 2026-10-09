@@ -56,7 +56,7 @@ export default function Navbar() {
             <li key={link.href}>
               <button
                 onClick={() => scrollTo(link.href)}
-                className="font-mono text-[11px] uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+                className="font-mono text-xs uppercase tracking-[0.15em] text-[#6b7280] hover:text-[#f0f0f0] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
               >
                 {link.label}
               </button>

@@ -11,7 +11,7 @@ export default function About() {
       <SectionHeader number="01" title="About" />
       <div className="max-w-3xl space-y-5">
         {about.map((paragraph, index) => (
-          <p key={index} className="text-[#6b7280] text-[15px] leading-relaxed">
+          <p key={index} className="text-[#6b7280] text-base leading-relaxed">
             {paragraph}
           </p>
         ))}

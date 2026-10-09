@@ -49,7 +49,7 @@ export default function Contact() {
       aria-labelledby="contact-heading"
     >
       <SectionHeader number="08" title="Contact" />
-      <p className="text-sm text-[#6b7280] mb-10 max-w-xl leading-relaxed">
+      <p className="text-[15px] text-[#6b7280] mb-10 max-w-xl leading-relaxed">
         Available for security internships, part-time roles, and collaborative
         projects.
       </p>
@@ -58,11 +58,11 @@ export default function Contact() {
           const isPlaceholder = ph(display) || ph(href);
           return (
             <li key={label} className="flex items-baseline gap-6 flex-wrap">
-              <span className="font-mono text-[11px] font-semibold text-[#6b7280] uppercase tracking-[0.15em] w-24 shrink-0">
+              <span className="font-mono text-xs font-semibold text-[#6b7280] uppercase tracking-[0.15em] w-24 shrink-0">
                 {label}
               </span>
               {isPlaceholder ? (
-                <span className="font-mono text-sm text-[#3a3a3a] italic">
+                <span className="font-mono text-[15px] text-[#3a3a3a] italic">
                   {display}
                 </span>
               ) : (
@@ -70,7 +70,7 @@ export default function Contact() {
                   href={href}
                   target={isEmail ? undefined : "_blank"}
                   rel={isEmail ? undefined : "noopener noreferrer"}
-                  className="font-mono text-sm text-[#f0f0f0] hover:text-[#10b981] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
+                  className="font-mono text-[15px] text-[#f0f0f0] hover:text-[#10b981] transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#10b981]"
                   aria-label={`${label}: ${display}`}
                 >
                   {display}

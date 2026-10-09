@@ -47,7 +47,7 @@ function ProjectCard({ project }: { project: Project }) {
       {/* Header */}
       <div className="flex items-start justify-between gap-3 mb-3">
         <h3
-          className={`font-semibold text-[15px] leading-snug ${
+          className={`font-semibold text-base leading-snug ${
             namePlaceholder ? "text-[#3a3a3a] italic" : "text-[#f0f0f0]"
           }`}
         >
@@ -58,7 +58,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Domain */}
       <p
-        className={`font-mono text-[11px] font-medium uppercase tracking-[0.15em] mb-3 ${
+        className={`font-mono text-xs font-medium uppercase tracking-[0.15em] mb-3 ${
           domainPlaceholder ? "text-[#3a3a3a] italic" : "text-[#10b981]"
         }`}
       >
@@ -67,7 +67,7 @@ function ProjectCard({ project }: { project: Project }) {
 
       {/* Description */}
       <p
-        className={`text-sm leading-relaxed flex-1 mb-4 ${
+        className={`text-[15px] leading-relaxed flex-1 mb-4 ${
           ph(project.description) ? "text-[#3a3a3a] italic" : "text-[#6b7280]"
         }`}
       >
