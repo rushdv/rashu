@@ -51,12 +51,19 @@ export default function Hero() {
         <div className="lg:col-span-5 flex justify-center lg:justify-end">
           <div className="relative w-full max-w-[500px] lg:max-w-[560px] aspect-square flex items-center justify-center">
             {/* Glowing Cyber Shield */}
-            <div className="relative w-full h-full">
+            <div
+              className="relative w-full h-full"
+              style={{
+                maskImage: "radial-gradient(circle at center, black 55%, transparent 92%)",
+                WebkitMaskImage: "radial-gradient(circle at center, black 55%, transparent 92%)",
+              }}
+            >
               <Image
-                src="/hero-cyber-shield.png"
+                src="/hero-cyber-shield-v2.png"
                 alt="Cybersecurity Shield"
                 fill
                 priority
+                unoptimized
                 className="object-contain object-center scale-105 sm:scale-110 select-none pointer-events-none"
                 sizes="(max-width: 1024px) 100vw, 560px"
               />
