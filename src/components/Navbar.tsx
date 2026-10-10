@@ -158,6 +158,26 @@ export default function Navbar({ onOpenCv }: NavbarProps) {
               <Download className="size-3.5 text-lime-300" />
               Download CV
             </button>
+
+            <div className="pt-2 flex items-center justify-center gap-5 text-xs font-mono text-neutral-400">
+              <a
+                href="https://github.com/rushdv"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-lime-300 transition"
+              >
+                GitHub ↗
+              </a>
+              <span className="text-zinc-800">/</span>
+              <a
+                href="https://www.linkedin.com/in/rushdv/"
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-lime-300 transition"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
           </div>
         </div>
       )}

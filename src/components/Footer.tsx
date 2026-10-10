@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { ArrowUp } from "lucide-react";
+import { ArrowUp, ArrowUpRight } from "lucide-react";
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-neutral-950 border-t border-zinc-800">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Branding */}
         <div className="flex items-center gap-4">
           <span className="text-gray-200 text-xl font-semibold font-sans tracking-tight">
@@ -19,6 +19,29 @@ export default function Footer() {
           <span className="text-neutral-500 text-[10px] font-mono tracking-wider">
             CSE STUDENT / CYBERSECURITY PORTFOLIO
           </span>
+        </div>
+
+        {/* Minimal Social Links */}
+        <div className="flex items-center gap-5 text-xs font-mono text-neutral-400">
+          <a
+            href="https://github.com/rushdv"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-lime-300 transition flex items-center gap-1.5 group"
+          >
+            <span>GitHub</span>
+            <ArrowUpRight className="size-3 text-neutral-500 group-hover:text-lime-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
+          <span className="text-zinc-800">/</span>
+          <a
+            href="https://www.linkedin.com/in/rushdv/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:text-lime-300 transition flex items-center gap-1.5 group"
+          >
+            <span>LinkedIn</span>
+            <ArrowUpRight className="size-3 text-neutral-500 group-hover:text-lime-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </a>
         </div>
 
         {/* Back To Top Action */}

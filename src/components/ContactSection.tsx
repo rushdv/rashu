@@ -109,6 +109,29 @@ export default function ContactSection() {
               )}
             </button>
           </div>
+
+          {/* Minimal Social Profiles */}
+          <div className="flex items-center gap-5 pt-1 text-xs font-mono text-neutral-400">
+            <a
+              href="https://github.com/rushdv"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-lime-300 transition flex items-center gap-1.5 group"
+            >
+              <span>GitHub</span>
+              <ArrowUpRight className="size-3 text-neutral-500 group-hover:text-lime-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <span className="text-zinc-800">/</span>
+            <a
+              href="https://www.linkedin.com/in/rushdv/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-lime-300 transition flex items-center gap-1.5 group"
+            >
+              <span>LinkedIn</span>
+              <ArrowUpRight className="size-3 text-neutral-500 group-hover:text-lime-300 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+          </div>
         </div>
 
         {/* Right Column: Contact Form */}
