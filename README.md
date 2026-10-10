@@ -1,56 +1,30 @@
 # Rashu — Cybersecurity Portfolio
 
-A minimal, professional cybersecurity portfolio built with Next.js 16, Tailwind CSS v4, and TypeScript.
+A minimal, terminal-inspired, typography-driven cybersecurity portfolio built with Next.js 16 (Turbopack), Tailwind CSS v4, and TypeScript.
 
 ---
 
-## Project Structure
+## Features
 
-```
-rashu/
-├── app/
-│   ├── globals.css       # Base styles, design tokens, animations
-│   ├── layout.tsx        # Root layout — SEO, OG metadata, fonts
-│   └── page.tsx          # Composes all section components
-├── components/
-│   ├── Navbar.tsx        # Sticky nav with mobile menu
-│   ├── Hero.tsx          # Typography-first hero section
-│   ├── About.tsx         # About paragraphs
-│   ├── Credentials.tsx   # Certifications + training courses
-│   ├── Labs.tsx          # HTB / THM / CWL lab profiles
-│   ├── Projects.tsx      # Security project cards
-│   ├── Writeups.tsx      # Writeup list
-│   ├── Skills.tsx        # Grouped skill blocks
-│   ├── CurrentFocus.tsx  # Learning focus tags
-│   ├── Contact.tsx       # Contact links
-│   ├── Footer.tsx        # Footer
-│   └── SectionHeader.tsx # Reusable numbered section header
-├── data/
-│   └── portfolio.ts      # ← All portfolio content lives here
-└── public/
-    └── favicon.ico
-```
+- **Typography & Dark Terminal Aesthetic**: Clean, high-contrast dark theme inspired by offensive & defensive security interfaces.
+- **Structured Training & Certifications**: Showcasing credentials (CyberWarFare Labs C3SA, Arena Web Security) with integrated PDF verification.
+- **Active Preparation Tracks**: Clear roadmap tracking for upcoming certifications (HTB CDSA, CRTA, BTF).
+- **Projects Showcase**: Interactive project cards & detail modals with direct GitHub links and architecture breakdowns:
+  - *Malware Analysis Lab* (Sandbox & Static Triage)
+  - *NetScope-Live* (Real-Time Traffic Telemetry)
+  - *Encrypted Password Manager* (Applied Cryptography & Vault Storage)
+- **Interactive CV Modal**: Clean on-screen resume viewer with instant PDF download.
+- **Responsive Layout**: Designed for seamless experience across mobile, tablet, and wide desktop viewports (`max-w-7xl`).
 
 ---
 
-## Updating Content
+## Tech Stack
 
-**All content is managed in a single file: [`data/portfolio.ts`](./data/portfolio.ts)**
-
-Search for `[` to find all placeholder values that need updating.
-
-| Section | Key |
-|---------|-----|
-| Name, tagline, education | `personal` |
-| About paragraphs | `about` |
-| Certifications | `certifications` |
-| Courses / training | `courses` |
-| Lab profiles (HTB, THM, CWL) | `labs` |
-| Projects | `projects` |
-| Writeups | `writeups` |
-| Skill groups | `skills` |
-| Learning focus | `currentFocus` |
-| Email, LinkedIn, GitHub, etc. | `contact` |
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router & Turbopack)
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **Icons**: Lucide React
+- **Package Manager**: pnpm
 
 ---
 
@@ -58,69 +32,21 @@ Search for `[` to find all placeholder values that need updating.
 
 ```bash
 # Install dependencies
-npm install
+pnpm install
 
 # Start development server
-npm run dev
+pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000)
+Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
 
 ```bash
-# Build for production
-npm run build
+# Production build
+pnpm build
 
-# Run production build locally
-npm start
+# Start production server
+pnpm start
 
-# Lint
-npm run lint
+# Run linter
+pnpm lint
 ```
-
----
-
-## Deploying to Vercel
-
-### Option 1 — Vercel CLI
-
-```bash
-npm i -g vercel
-vercel
-```
-
-### Option 2 — GitHub Integration
-
-1. Push this repo to GitHub
-2. Go to [vercel.com](https://vercel.com) → **Add New Project**
-3. Import the repository — Vercel auto-detects Next.js
-4. Click **Deploy**
-
-### Environment Variables
-
-Set this in the Vercel dashboard for correct canonical URL and OG metadata:
-
-```
-NEXT_PUBLIC_SITE_URL=https://your-domain.com
-```
-
-### Custom Domain
-
-Vercel dashboard → Project → **Settings** → **Domains** → add your domain. SSL is automatic.
-
----
-
-## Pre-launch Checklist
-
-Update `data/portfolio.ts` before publishing:
-
-- [ ] Certification years and credential URLs / IDs
-- [ ] Exact AWS course name
-- [ ] HTB profile URL, rank, machine count, challenge count
-- [ ] TryHackMe profile URL, rank, room count
-- [ ] CyberWarFare Labs profile URL and lab count
-- [ ] Project GitHub URLs and descriptions
-- [ ] Writeup titles, dates, and URLs
-- [ ] Email address
-- [ ] LinkedIn URL
-- [ ] Replace `[YOUR-DOMAIN]` in `app/layout.tsx` with actual domain
-- [ ] Add a real `favicon.ico` to `/public/`

@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-ibm-plex-mono), monospace;
+  --color-neutral-950: #0a0a0a;
+  --color-neutral-900: #121212;
+  --color-zinc-800: #27272a;
+  --color-lime-300: #bef264;
+}
+
+:root {
+  --background: #0a0a0a;
+  --foreground: #e4e4e7;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #0a0a0a;
+  color: #e4e4e7;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #0a0a0a;
+  color: #e4e4e7;
+  font-family: var(--font-inter), system-ui, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3f3f46;
+}
+
+/* Custom selection */
+::selection {
+  background-color: #bef264;
+  color: #0a0a0a;
+}
+
+/* Print Styles — Isolates CV modal and prevents 11-page full site print */
+@media print {
+  /* Hide main site layout elements */
+  header,
+  main,
+  footer {
+    display: none !important;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #111111 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  /* Modal wrapper reset for printing */
+  .cv-modal-backdrop {
+    position: static !important;
+    background: transparent !important;
+    padding: 0 !important;
+    inset: auto !important;
+    display: block !important;
+    z-index: auto !important;
+  }
+
+  .cv-modal-card {
+    max-width: 100% !important;
+    max-height: none !important;
+    overflow: visible !important;
+    background: #ffffff !important;
+    color: #111111 !important;
+    border: none !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .cv-modal-card * {
+    color: #1f2937 !important;
+    border-color: #e5e7eb !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .cv-modal-card h1,
+  .cv-modal-card h2,
+  .cv-modal-card h3,
+  .cv-modal-card h4 {
+    color: #000000 !important;
+  }
+
+  .cv-modal-card .text-lime-300 {
+    color: #166534 !important;
+    font-weight: 600 !important;
+  }
+
+  @page {
+    margin: 1.2cm;
+    size: A4 portrait;
+  }
+}
