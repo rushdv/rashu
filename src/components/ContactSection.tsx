@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Send, CheckCircle2, Copy, Check } from "lucide-react";
+import { Send, CheckCircle2, Copy, Check, ArrowUpRight } from "lucide-react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -9,30 +9,60 @@ export default function ContactSection() {
     email: "",
     message: "",
   });
-  const [status, setStatus] = useState<"idle" | "sending" | "sent">("idle");
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [copied, setCopied] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const targetEmail = "shihab.zn4@gmail.com";
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) return;
 
     setStatus("sending");
-    setTimeout(() => {
+
+    try {
+      const response = await fetch(`https://formsubmit.co/ajax/${targetEmail}`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: `New Portfolio Message from ${formData.name}`,
+          _captcha: "false",
+        }),
+      });
+
+      if (response.ok) {
+        setStatus("sent");
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        throw new Error("Form service failed");
+      }
+    } catch {
+      // Graceful fallback to mailto so the sender's message is preserved
+      const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(
+        `Portfolio Inquiry from ${formData.name}`
+      )}&body=${encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      )}`;
+      window.location.href = mailtoUrl;
       setStatus("sent");
-      setFormData({ name: "", email: "", message: "" });
-      setTimeout(() => setStatus("idle"), 5000);
-    }, 800);
+    }
   };
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("shihab.zn4@gmail.com");
+    navigator.clipboard.writeText(targetEmail);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
   return (
     <section id="contact" className="w-full bg-neutral-900 border-b border-zinc-800">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
         {/* Left Column */}
         <div className="lg:col-span-6 flex flex-col items-start gap-7">
           <div className="text-lime-300 text-xs font-mono tracking-wider">
@@ -59,9 +89,13 @@ export default function ContactSection() {
               <span className="text-[10px] font-mono text-neutral-500 uppercase">
                 DIRECT SECURE CHANNEL
               </span>
-              <span className="text-xs font-mono text-gray-200">
-                shihab.zn4@gmail.com
-              </span>
+              <a
+                href={`mailto:${targetEmail}`}
+                className="text-xs font-mono text-gray-200 hover:text-lime-300 transition"
+                title="Send email via mail client"
+              >
+                {targetEmail}
+              </a>
             </div>
             <button
               onClick={handleCopyEmail}
@@ -89,8 +123,16 @@ export default function ContactSection() {
                 Thank you for reaching out!
               </h3>
               <p className="text-sm font-sans text-neutral-400 leading-relaxed">
-                Your message has been safely received. I will check my inbox and get back to you shortly.
+                Your message has been transmitted to <span className="text-lime-300 font-mono">{targetEmail}</span>. I will check my inbox and get back to you shortly.
               </p>
+              <div className="pt-2">
+                <button
+                  onClick={() => setStatus("idle")}
+                  className="px-4 py-2 bg-neutral-900 border border-zinc-800 text-xs font-mono text-lime-300 hover:border-lime-300 transition"
+                >
+                  Send another message
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -106,7 +148,8 @@ export default function ContactSection() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Name"
-                    className="w-full h-12 px-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans"
+                    disabled={status === "sending"}
+                    className="w-full h-12 px-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans disabled:opacity-50"
                   />
                 </div>
 
@@ -121,7 +164,8 @@ export default function ContactSection() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Email address"
-                    className="w-full h-12 px-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans"
+                    disabled={status === "sending"}
+                    className="w-full h-12 px-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans disabled:opacity-50"
                   />
                 </div>
               </div>
@@ -137,19 +181,25 @@ export default function ContactSection() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="What would you like to talk about?"
-                  className="w-full p-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans resize-none"
+                  disabled={status === "sending"}
+                  className="w-full p-4 bg-neutral-950 border border-zinc-800 focus:border-lime-300 rounded-none text-sm text-gray-200 placeholder:text-neutral-600 outline-none transition font-sans resize-none disabled:opacity-50"
                 />
               </div>
 
               {/* Submit Row */}
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-2">
-                <span className="text-neutral-500 text-[10px] font-mono tracking-wider">
-                  LET’S START A CONVERSATION
-                </span>
+                <a
+                  href={`mailto:${targetEmail}?subject=Portfolio%20Inquiry`}
+                  className="text-neutral-500 hover:text-lime-300 text-xs font-mono transition inline-flex items-center gap-1"
+                >
+                  <span>Open directly in email client</span>
+                  <ArrowUpRight className="size-3" />
+                </a>
+
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="h-12 px-6 bg-lime-300 hover:bg-lime-400 text-neutral-950 font-semibold text-sm rounded-none flex items-center justify-center gap-3 transition shadow-lg shadow-lime-300/10 group disabled:opacity-70"
+                  className="h-12 px-6 bg-lime-300 hover:bg-lime-400 text-neutral-950 font-semibold text-sm rounded-none flex items-center justify-center gap-3 transition shadow-lg shadow-lime-300/10 group disabled:opacity-70 cursor-pointer"
                 >
                   <span>{status === "sending" ? "Transmitting..." : "Send message"}</span>
                   <Send className="size-4 text-neutral-900 group-hover:translate-x-0.5 transition-transform" />

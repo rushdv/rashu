@@ -55,7 +55,7 @@ export default function TrainingSection() {
 
   return (
     <section id="training" className="w-full border-b border-zinc-800 bg-neutral-900">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column */}
         <div className="lg:col-span-4 flex flex-col items-start gap-6">
           <div className="text-lime-300 text-xs font-mono tracking-wider">

@@ -14,8 +14,16 @@ const ibmPlexMono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "rashu — Cybersecurity & CSE Portfolio",
+  title: "Rashu | Cybersecurity Analyst",
   description: "Computer Science & Engineering student focused on cybersecurity, ethical hacking, defensive security, and systems analysis.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: "/icon.png",
+  },
   keywords: [
     "Cybersecurity",
     "Ethical Hacking",

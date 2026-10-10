@@ -10,7 +10,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-neutral-950 border-t border-zinc-800">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-8 flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Left Branding */}
         <div className="flex items-center gap-4">
           <span className="text-gray-200 text-xl font-semibold font-sans tracking-tight">

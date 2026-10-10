@@ -66,7 +66,7 @@ export const PROJECTS: ProjectData[] = [
 export default function ProjectsSection({ onSelectProject }: ProjectsSectionProps) {
   return (
     <section id="projects" className="w-full border-b border-zinc-800 bg-neutral-950">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 pt-20 pb-24 space-y-12">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 pt-20 pb-24 space-y-12">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
           <div className="space-y-4">
@@ -94,7 +94,7 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
                 className="bg-neutral-900 border border-zinc-800 rounded-none flex flex-col justify-between overflow-hidden group hover:border-lime-300/40 transition"
               >
                 {/* Visual Header / Graphic Preview */}
-                <div className="relative h-56 bg-neutral-950 overflow-hidden border-b border-zinc-800">
+                <div className="relative h-64 sm:h-72 bg-neutral-950 overflow-hidden border-b border-zinc-800">
                   {project.image ? (
                     <>
                       <Image
@@ -102,7 +102,7 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
                         alt={project.title}
                         fill
                         className="object-cover object-center group-hover:scale-105 transition-transform duration-500 filter brightness-90 group-hover:brightness-100"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 450px"
                       />
                       {/* Subtle Dark Gradient Overlay */}
                       <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/90 via-transparent to-neutral-950/70 pointer-events-none" />
@@ -113,8 +113,7 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
 
                   {/* Header Badge & Icon */}
                   <div className="relative z-10 p-5 flex items-center justify-between pointer-events-none">
-                    <span className="px-2.5 py-1 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-neutral-300 text-[10px] font-mono tracking-wider flex items-center gap-1.5 shadow-sm">
-                      <span className="size-1.5 bg-lime-400 rounded-full animate-pulse" />
+                    <span className="px-2.5 py-1 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-neutral-300 text-[10px] font-mono tracking-wider shadow-sm">
                       COMPLETED PROJECT
                     </span>
                     <div className="p-1.5 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-lime-300">
@@ -124,8 +123,8 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
                 </div>
 
                 {/* Content Area */}
-                <div className="p-6 flex flex-col justify-between flex-1 gap-5">
-                  <div className="space-y-3">
+                <div className="p-6 sm:p-7 flex flex-col justify-between flex-1 gap-6">
+                  <div className="space-y-3.5">
                     <div className="text-lime-300 text-xs font-mono tracking-wider">
                       {project.category}
                     </div>
@@ -138,7 +137,7 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
                   </div>
 
                   {/* Action Buttons */}
-                  <div className="pt-5 border-t border-zinc-800 flex items-center justify-between gap-3">
+                  <div className="pt-6 border-t border-zinc-800 flex items-center justify-between gap-3">
                     <button
                       onClick={() => onSelectProject(project)}
                       className="flex items-center gap-2 text-gray-200 group-hover:text-lime-300 transition text-xs font-medium font-sans"

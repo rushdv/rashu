@@ -12,7 +12,7 @@ export default function Navbar({ onOpenCv }: NavbarProps) {
 
   return (
     <header className="sticky top-0 z-40 w-full bg-neutral-950/90 backdrop-blur-md border-b border-zinc-800 transition-colors">
-      <div className="max-w-7xl mx-auto h-20 md:h-24 px-6 md:px-12 lg:px-16 flex justify-between items-center">
+      <div className="max-w-[1440px] mx-auto h-20 md:h-24 px-6 md:px-12 lg:px-16 flex justify-between items-center">
         {/* Brand */}
         <a href="#" className="flex items-center gap-2.5 group">
           <span className="text-lime-300 text-2xl font-semibold font-mono tracking-tighter group-hover:text-lime-400 transition">
@@ -20,9 +20,6 @@ export default function Navbar({ onOpenCv }: NavbarProps) {
           </span>
           <span className="text-gray-200 text-xl font-semibold font-sans tracking-tight">
             rashu
-          </span>
-          <span className="text-neutral-500 text-[10px] font-mono tracking-widest hidden sm:inline-block">
-            / HOME
           </span>
         </a>
 
