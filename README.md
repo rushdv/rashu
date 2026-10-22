@@ -7,8 +7,8 @@ A minimal, terminal-inspired, typography-driven cybersecurity portfolio built wi
 ## Features
 
 - **Typography & Dark Terminal Aesthetic**: Clean, high-contrast dark theme inspired by offensive & defensive security interfaces.
-- **Structured Training & Certifications**: Showcasing credentials (CyberWarFare Labs C3SA, Arena Web Security) with integrated PDF verification.
-- **Active Preparation Tracks**: Clear roadmap tracking for upcoming certifications (HTB CDSA, CRTA, BTF).
+- **Structured Training & Certifications**: Showcasing credentials (CyberWarFare Labs C3SA & BTF, Arena Web Security) with integrated PDF verification.
+- **Active Preparation Tracks**: Clear roadmap tracking for upcoming certifications (HTB CDSA, CRTA).
 - **Projects Showcase**: Interactive project cards & detail modals with direct GitHub links and architecture breakdowns:
   - *Malware Analysis Lab* (Sandbox & Static Triage)
   - *NetScope-Live* (Real-Time Traffic Telemetry)

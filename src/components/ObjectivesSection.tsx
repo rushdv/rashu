@@ -34,9 +34,10 @@ export default function ObjectivesSection() {
       code: "BTF",
       name: "Blue Team Fundamentals",
       provider: "Cyber Warfare Labs",
-      status: "EXAM PREPARATION",
-      isCertified: false,
+      status: "CERTIFIED ✓",
+      isCertified: true,
       focus: "Defensive Operations, Log Forensics & Telemetry",
+      certificateUrl: "/certificates/btf-cyberwarfare-labs.pdf",
     },
   ];
 
