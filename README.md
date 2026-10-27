@@ -1,4 +1,4 @@
-# Rashu — Cybersecurity Portfolio
+# Rashu — Cybersecurity Portfolio 
 
 A minimal, terminal-inspired, typography-driven cybersecurity portfolio built with Next.js 16 (Turbopack), Tailwind CSS v4, and TypeScript.
 
