@@ -4,7 +4,7 @@ A minimal, terminal-inspired, typography-driven cybersecurity portfolio built wi
 
 ---
 
-## Features 
+## Features  
 
 - **Typography & Dark Terminal Aesthetic**: Clean, high-contrast dark theme inspired by offensive & defensive security interfaces.
 - **Structured Training & Certifications**: Showcasing credentials (CyberWarFare Labs C3SA & BTF, Arena Web Security) with integrated PDF verification.
