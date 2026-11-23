@@ -12,7 +12,7 @@ export default function ContactSection() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [copied, setCopied] = useState(false);
 
-  const targetEmail = "shihab.zn4@gmail.com";
+  const targetEmail = "rashu.desk@gmail.com";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
