@@ -30,6 +30,18 @@ export default function TrainingSection() {
       note: "Earned Credential · Issued Oct 2026",
     },
     {
+      title: "Certified Cloud Security Fundamentals (CSF)",
+      institution: "Cyber Warfare Labs",
+      status: "CERTIFIED",
+      statusColor: "text-lime-300",
+      dotColor: "bg-lime-300",
+      bgColor: "bg-neutral-800",
+      completed: true,
+      hasCert: true,
+      certificateUrl: "/certificates/csf-cyberwarfare-labs.pdf",
+      note: "Earned Credential · Issued Nov 2026",
+    },
+    {
       title: "Cybersecurity & Ethical Hacking",
       institution: "Arena Web Security",
       status: "CERTIFIED",

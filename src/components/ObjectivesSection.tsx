@@ -39,6 +39,15 @@ export default function ObjectivesSection() {
       focus: "Defensive Operations, Log Forensics & Telemetry",
       certificateUrl: "/certificates/btf-cyberwarfare-labs.pdf",
     },
+    {
+      code: "CSF",
+      name: "Certified Cloud Security Fundamentals",
+      provider: "Cyber Warfare Labs",
+      status: "CERTIFIED ✓",
+      isCertified: true,
+      focus: "Cloud Security, IAM, Cloud Architecture & Defense",
+      certificateUrl: "/certificates/csf-cyberwarfare-labs.pdf",
+    },
   ];
 
   return (
@@ -59,8 +68,8 @@ export default function ObjectivesSection() {
           </p>
         </div>
 
-        {/* 4 Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
           {objectives.map((obj, idx) => (
             <div
               key={idx}
