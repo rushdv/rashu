@@ -13,20 +13,13 @@ export default function Hero() {
         <div className="lg:col-span-7 flex flex-col items-start gap-7">
           {/* Heading */}
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 bg-neutral-900 border border-zinc-800 text-xs font-mono text-neutral-400">
-              <span className="size-1.5 rounded-full bg-lime-300 animate-pulse" />
-              <span>Cybersecurity &amp; CSE</span>
-            </div>
             <h1 className="text-gray-100 text-4xl sm:text-6xl lg:text-7xl font-semibold font-sans tracking-tight leading-[1.1] sm:leading-[1.12]">
-              Md. Shihab Shahriar<br />
-              <span className="text-neutral-400">Security Research &amp; Labs</span>
+              Shihab Shahriar Rashu
             </h1>
+            <p className="text-neutral-400 text-lg sm:text-2xl font-normal font-sans">
+              Cybersecurity Research Analyst
+            </p>
           </div>
-
-          {/* Description */}
-          <p className="max-w-xl text-neutral-400 text-base sm:text-lg font-sans leading-relaxed">
-            Computer science student focused on offensive security, threat detection, and defensive engineering. Practicing daily on TryHackMe and Hack The Box, with verified credentials and hands-on tools.
-          </p>
 
           {/* Action CTAs */}
           <div className="pt-2 flex flex-wrap items-center gap-3">
