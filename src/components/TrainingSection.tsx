@@ -54,6 +54,18 @@ export default function TrainingSection() {
       note: "Verification ID: A56W2511S057",
     },
     {
+      title: "Ethical Hacking for Professionals",
+      institution: "Byte Capsule",
+      status: "CERTIFIED",
+      statusColor: "text-lime-300",
+      dotColor: "bg-lime-300",
+      bgColor: "bg-neutral-800",
+      completed: true,
+      hasCert: true,
+      certificateUrl: "/certificates/bytecapsule-ethical-hacking-for-professionals.pdf",
+      note: "Verification ID: 74AIQECO · Batch 11",
+    },
+    {
       title: "Cybersecurity Fundamentals",
       institution: "Hack To Live Academy",
       status: "COMPLETED",
@@ -63,17 +75,6 @@ export default function TrainingSection() {
       completed: true,
       hasCert: false,
       note: "Networking & Security Core · Batch Coordination",
-    },
-    {
-      title: "Ethical Hacking for Professionals",
-      institution: "ByteCapsule",
-      status: "IN PROGRESS",
-      statusColor: "text-amber-300",
-      dotColor: "bg-amber-300",
-      bgColor: "bg-neutral-800",
-      completed: false,
-      hasCert: false,
-      note: "Advanced Penetration Testing & Methodology",
     },
   ];
 
