@@ -64,30 +64,22 @@ export default function ContactSection() {
     <section id="contact" className="w-full bg-neutral-900 border-b border-zinc-800">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-24 items-start">
         {/* Left Column */}
-        <div className="lg:col-span-6 flex flex-col items-start gap-7">
-          <div className="text-lime-300 text-xs font-mono tracking-wider">
-            06 / CONTACT
-          </div>
-          <h2 className="text-gray-100 text-4xl sm:text-6xl font-medium font-sans leading-tight">
-            Good conversations<br />
-            start with hello.
+        <div className="lg:col-span-6 flex flex-col items-start gap-6">
+          <span className="text-lime-300 text-xs font-mono tracking-widest uppercase">
+            Contact
+          </span>
+          <h2 className="text-gray-100 text-4xl sm:text-5xl font-medium font-sans leading-tight">
+            Get in Touch
           </h2>
           <p className="max-w-md text-neutral-400 text-base font-sans leading-relaxed">
-            Have a question about a project, want to discuss threat intelligence, or collaborate on security challenges? Let’s connect.
+            Open for cybersecurity internships, lab collaborations, and technical discussions. Drop a message or reach out directly.
           </p>
-
-          <div className="pt-4 flex items-center gap-3">
-            <span className="text-lime-300 text-base font-mono">&gt;_</span>
-            <span className="text-neutral-400 text-xs font-mono">
-              Always learning. One conversation at a time.
-            </span>
-          </div>
 
           {/* Quick Direct Channel Box */}
           <div className="p-4 bg-neutral-950 border border-zinc-800 rounded-none w-full max-w-sm mt-2 flex items-center justify-between">
             <div className="flex flex-col">
-              <span className="text-[10px] font-mono text-neutral-500 uppercase">
-                DIRECT SECURE CHANNEL
+              <span className="text-[10px] font-mono text-neutral-500 uppercase tracking-wider">
+                DIRECT EMAIL
               </span>
               <a
                 href={`mailto:${targetEmail}`}

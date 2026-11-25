@@ -41,7 +41,7 @@ export default function Navbar({ onOpenCv }: NavbarProps) {
             href="#objectives"
             className="text-neutral-400 hover:text-gray-200 text-xs font-medium font-sans transition"
           >
-            Objectives
+            Roadmap
           </a>
           <a
             href="#skills"
@@ -108,42 +108,42 @@ export default function Navbar({ onOpenCv }: NavbarProps) {
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              01 / About
+              About
             </a>
             <a
               href="#training"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              02 / Training
+              Training &amp; Credentials
             </a>
             <a
               href="#objectives"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              03 / Next Learning Objectives
+              Roadmap
             </a>
             <a
               href="#skills"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              04 / Tools & Security Skills
+              Skills
             </a>
             <a
               href="#projects"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              05 / Selected Work
+              Projects
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="text-neutral-300 hover:text-lime-300 transition py-1"
             >
-              06 / Contact
+              Contact
             </a>
           </div>
 

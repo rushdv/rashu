@@ -1,52 +1,25 @@
 "use client";
 
 import React from "react";
-import { Target, Award, ArrowUpRight } from "lucide-react";
+import { Target } from "lucide-react";
 
 export default function ObjectivesSection() {
-  const objectives = [
-    {
-      code: "C3SA",
-      name: "Certified Cyber Security Analyst",
-      provider: "Cyber Warfare Labs",
-      status: "CERTIFIED ✓",
-      isCertified: true,
-      focus: "Threat Intelligence, Detection Engineering & Analysis",
-      certificateUrl: "/certificates/c3sa-cyberwarfare-labs.pdf",
-    },
+  const upcomingRoadmap = [
     {
       code: "CDSA",
       name: "Certified Defensive Security Analyst",
       provider: "Hack The Box",
-      status: "EXAM PREPARATION",
-      isCertified: false,
-      focus: "SOC, SIEM, Incident Response & Threat Hunting",
+      status: "IN PREPARATION",
+      domain: "Defensive Operations",
+      focus: "SOC telemetry, SIEM monitoring, log triage, incident response, and threat hunting.",
     },
     {
       code: "CRTA",
       name: "Certified Red Team Analyst",
       provider: "Cyber Warfare Labs",
-      status: "EXAM PREPARATION",
-      isCertified: false,
-      focus: "Active Directory, Privilege Escalation & Lateral Movement",
-    },
-    {
-      code: "BTF",
-      name: "Blue Team Fundamentals",
-      provider: "Cyber Warfare Labs",
-      status: "CERTIFIED ✓",
-      isCertified: true,
-      focus: "Defensive Operations, Log Forensics & Telemetry",
-      certificateUrl: "/certificates/btf-cyberwarfare-labs.pdf",
-    },
-    {
-      code: "CSF",
-      name: "Certified Cloud Security Fundamentals",
-      provider: "Cyber Warfare Labs",
-      status: "CERTIFIED ✓",
-      isCertified: true,
-      focus: "Cloud Security, IAM, Cloud Architecture & Defense",
-      certificateUrl: "/certificates/csf-cyberwarfare-labs.pdf",
+      status: "IN PREPARATION",
+      domain: "Offensive Operations",
+      focus: "Active Directory security, lateral movement, privilege escalation, and internal infrastructure testing.",
     },
   ];
 
@@ -56,79 +29,55 @@ export default function ObjectivesSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
           <div className="space-y-4">
-            <div className="text-lime-300 text-xs font-mono tracking-wider">
-              03 / CERTIFICATIONS &amp; OBJECTIVES
-            </div>
+            <span className="text-lime-300 text-xs font-mono tracking-widest uppercase">
+              Roadmap
+            </span>
             <h2 className="text-gray-100 text-4xl sm:text-5xl font-medium font-sans">
-              Preparing for what’s next.
+              Certification Roadmap
             </h2>
           </div>
-          <p className="max-w-xs text-neutral-400 text-sm font-sans leading-relaxed">
-            Active examination tracks and earned credentials validating defensive and offensive capabilities.
+          <p className="max-w-md text-neutral-400 text-sm font-sans leading-relaxed">
+            Active examination tracks currently in preparation to deepen technical offensive and defensive capabilities.
           </p>
         </div>
 
-        {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
-          {objectives.map((obj, idx) => (
+        {/* 2-Card Clean Roadmap Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {upcomingRoadmap.map((target, idx) => (
             <div
               key={idx}
-              className={`p-6 bg-neutral-900/60 border rounded-none flex flex-col justify-between gap-6 transition group ${
-                obj.isCertified
-                  ? "border-lime-300/40 bg-neutral-900 shadow-lg shadow-lime-300/5"
-                  : "border-zinc-800 hover:border-zinc-700 hover:bg-neutral-900"
-              }`}
+              className="p-8 bg-neutral-900 border border-zinc-800 rounded-none flex flex-col justify-between gap-8 hover:border-zinc-700 transition group"
             >
-              <div className="flex items-center justify-between">
-                <span
-                  className={`text-3xl sm:text-4xl font-medium font-sans tracking-tight transition ${
-                    obj.isCertified ? "text-lime-300" : "text-gray-100 group-hover:text-white"
-                  }`}
-                >
-                  {obj.code}
-                </span>
-                {obj.isCertified ? (
-                  <Award className="size-5 text-lime-300" />
-                ) : (
-                  <Target className="size-5 text-neutral-500 group-hover:text-lime-300 transition" />
-                )}
+              <div className="flex items-start justify-between">
+                <div className="space-y-2">
+                  <span className="text-4xl sm:text-5xl font-medium font-sans tracking-tight text-gray-100 group-hover:text-white transition">
+                    {target.code}
+                  </span>
+                  <div className="text-xs font-mono text-neutral-400">
+                    {target.provider}
+                  </div>
+                </div>
+
+                <div className="px-3 py-1 bg-neutral-950 border border-zinc-800 rounded-none inline-flex items-center gap-2">
+                  <Target className="size-3.5 text-lime-300" />
+                  <span className="text-[10px] font-mono tracking-wider text-lime-300 font-semibold">
+                    {target.status}
+                  </span>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div>
-                  <div className="text-neutral-400 text-xs font-mono">
-                    {obj.provider}
-                  </div>
-                  <div className="text-neutral-300 text-xs font-sans mt-1">
-                    {obj.name}
-                  </div>
+              <div className="space-y-3 pt-4 border-t border-zinc-800/80">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-gray-200 text-base font-medium font-sans">
+                    {target.name}
+                  </h3>
+                  <span className="text-[11px] font-mono text-neutral-500">
+                    {target.domain}
+                  </span>
                 </div>
-
-                <div className="flex items-center justify-between flex-wrap gap-2">
-                  <div
-                    className={`px-2.5 py-1.5 border rounded-none inline-flex items-center gap-1.5 ${
-                      obj.isCertified
-                        ? "bg-lime-300/10 border-lime-300/30 text-lime-300"
-                        : "bg-neutral-800/90 border-zinc-800 text-lime-300"
-                    }`}
-                  >
-                    <span className="text-[10px] font-mono tracking-wider font-semibold">
-                      {obj.status}
-                    </span>
-                  </div>
-
-                  {obj.certificateUrl && (
-                    <a
-                      href={obj.certificateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-[11px] font-mono text-lime-300 hover:underline inline-flex items-center gap-1"
-                    >
-                      <span>PDF</span>
-                      <ArrowUpRight className="size-3" />
-                    </a>
-                  )}
-                </div>
+                <p className="text-neutral-400 text-xs font-sans leading-relaxed">
+                  {target.focus}
+                </p>
               </div>
             </div>
           ))}

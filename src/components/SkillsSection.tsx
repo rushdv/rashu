@@ -8,7 +8,6 @@ export default function SkillsSection() {
     {
       title: "Reconnaissance & Enumeration",
       icon: Radar,
-      count: "7 ITEMS",
       skills: [
         "Nmap",
         "Amass",
@@ -22,7 +21,6 @@ export default function SkillsSection() {
     {
       title: "Web Application Security",
       icon: Globe,
-      count: "6 ITEMS",
       skills: [
         "Burp Suite",
         "OWASP Top 10",
@@ -35,7 +33,6 @@ export default function SkillsSection() {
     {
       title: "Network & Infrastructure",
       icon: Network,
-      count: "6 ITEMS",
       skills: [
         "Wireshark",
         "Tcpdump",
@@ -46,9 +43,8 @@ export default function SkillsSection() {
       ],
     },
     {
-      title: "Defensive Security / SOC",
+      title: "Defensive Security & SOC",
       icon: Shield,
-      count: "7 ITEMS",
       skills: [
         "Splunk",
         "SIEM Concepts",
@@ -62,7 +58,6 @@ export default function SkillsSection() {
     {
       title: "Malware Analysis",
       icon: Binary,
-      count: "7 ITEMS",
       skills: [
         "Ghidra",
         "PE Studio",
@@ -74,13 +69,14 @@ export default function SkillsSection() {
       ],
     },
     {
-      title: "Scripting & Automation",
+      title: "Scripting & Systems",
       icon: Terminal,
-      count: "3 ITEMS",
       skills: [
         "Python",
         "Bash",
         "Linux Shell Scripting",
+        "Kali Linux",
+        "Docker Basics",
       ],
     },
   ];
@@ -91,15 +87,15 @@ export default function SkillsSection() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
           <div className="space-y-4">
-            <div className="text-lime-300 text-xs font-mono tracking-wider">
-              04 / TOOLS &amp; SECURITY SKILLS
-            </div>
+            <span className="text-lime-300 text-xs font-mono tracking-widest uppercase">
+              Tooling
+            </span>
             <h2 className="text-gray-100 text-4xl sm:text-5xl font-medium font-sans">
-              Tools &amp; Security Skills
+              Technical Skills &amp; Stack
             </h2>
           </div>
           <p className="max-w-md text-neutral-400 text-sm font-sans leading-relaxed">
-            A snapshot of the tools, frameworks, and security concepts currently in use across my learning and project work.
+            Hands-on tools, frameworks, and practical security domains applied across labs and defensive workflows.
           </p>
         </div>
 
@@ -114,10 +110,9 @@ export default function SkillsSection() {
               >
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <Icon className="size-5 text-lime-300" />
-                    <span className="px-2.5 py-1 bg-zinc-900 border border-zinc-800/80 rounded-none text-neutral-400 text-[10px] font-mono tracking-wider">
-                      {cat.count}
-                    </span>
+                    <div className="size-9 bg-neutral-900 border border-zinc-800 flex items-center justify-center">
+                      <Icon className="size-4 text-lime-300" />
+                    </div>
                   </div>
                   <h3 className="text-gray-200 text-lg font-medium font-sans">
                     {cat.title}

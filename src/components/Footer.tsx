@@ -13,11 +13,12 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
         {/* Left Branding */}
         <div className="flex items-center gap-4">
-          <span className="text-gray-200 text-xl font-semibold font-sans tracking-tight">
+          <span className="text-gray-200 text-lg font-semibold font-sans tracking-tight">
             rashu
           </span>
-          <span className="text-neutral-500 text-[10px] font-mono tracking-wider">
-            CSE STUDENT / CYBERSECURITY PORTFOLIO
+          <span className="text-zinc-600">·</span>
+          <span className="text-neutral-500 text-xs font-mono">
+            Cybersecurity &amp; Systems
           </span>
         </div>
 

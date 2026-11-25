@@ -39,9 +39,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
               <span className="text-[10px] font-mono font-medium text-lime-300 bg-neutral-950 border border-zinc-800 px-2.5 py-1 rounded-none">
                 {project.category}
               </span>
-              <span className="text-[10px] font-mono text-neutral-400 bg-zinc-900 px-2 py-0.5 rounded-none">
-                COMPLETED PROJECT
-              </span>
             </div>
             <h2 className="text-2xl font-bold font-sans text-gray-100">{project.title}</h2>
             <p className="text-xs font-mono text-neutral-400 mt-1">{project.subtitle}</p>
