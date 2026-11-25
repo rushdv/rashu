@@ -17,7 +17,7 @@ export default function Hero() {
               Shihab Shahriar Rashu
             </h1>
             <p className="text-neutral-400 text-lg sm:text-2xl font-normal font-sans">
-              Cybersecurity Research Analyst
+              Cybersecurity Analyst
             </p>
           </div>
 
