@@ -81,16 +81,16 @@ export default function TrainingSection() {
     <section id="training" className="w-full border-b border-zinc-800 bg-neutral-900">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 py-20 lg:py-24 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column */}
-        <div className="lg:col-span-4 flex flex-col items-start gap-6">
-          <div className="text-lime-300 text-xs font-mono tracking-wider">
-            02 / TRAINING &amp; CREDENTIALS
-          </div>
+        <div className="lg:col-span-4 flex flex-col items-start gap-4">
+          <span className="text-lime-300 text-xs font-mono tracking-widest uppercase">
+            Credentials
+          </span>
           <h2 className="text-gray-100 text-4xl sm:text-5xl font-medium font-sans leading-tight">
-            From fundamentals<br />
-            to practice.
+            Certifications &amp;<br />
+            Training
           </h2>
           <p className="text-neutral-400 text-base font-sans leading-relaxed">
-            Completed coursework, earned certifications, and ongoing professional training shaping my cybersecurity path.
+            Earned industry certifications, technical coursework, and ongoing hands-on security training programs.
           </p>
         </div>
 
@@ -153,7 +153,7 @@ export default function TrainingSection() {
           {/* Footnote */}
           <div className="pt-6 border-t border-zinc-800 flex items-center justify-between flex-wrap gap-2">
             <p className="text-neutral-500 text-xs font-mono">
-              {"//"} Certificates are cryptographically signed and verifiable.
+              Verified credentials and completion records.
             </p>
           </div>
         </div>
