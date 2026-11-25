@@ -14,7 +14,7 @@ export const PROJECTS: ProjectData[] = [
     id: "malware-analysis-lab",
     category: "MALWARE ANALYSIS",
     title: "Malware Analysis Lab",
-    subtitle: "A lab project centered on the study and analysis of malware.",
+    subtitle: "Isolated static triage environment for PE parsing, entropy inspection, and IOC extraction.",
     description: "An isolated sandbox and static analysis pipeline designed to dissect suspicious binaries, extract IOCs, and examine PE header structure.",
     overview: "This project established an isolated static analysis environment using Ghidra, PE Studio, and Detect-It-Easy. It enables safe unpacking, entropy calculation, hashing, string extraction, and import address table (IAT) inspection to identify malicious capabilities without running code unsafely.",
     tools: ["Ghidra", "PE Studio", "Detect-It-Easy", "Python", "Volatility", "Linux VM"],
@@ -29,9 +29,9 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     id: "netscope-live",
-    category: "NETWORK EXPLORATION",
+    category: "NETWORK TELEMETRY",
     title: "NetScope-Live",
-    subtitle: "A project exploring networks through a live-view perspective.",
+    subtitle: "Real-time packet capture, conversation tracking, and network protocol anomaly detection.",
     description: "A real-time packet capturing and traffic inspection tool built to visualize network flows, flag unencrypted credentials, and analyze protocol anomalies.",
     overview: "NetScope-Live monitors local network traffic in real-time, breaking down TCP/UDP conversations, identifying port scans, and surfacing suspicious beaconing behavior. It provides clear telemetry on active endpoints and protocol distributions.",
     tools: ["Python", "Scapy", "Wireshark", "Tcpdump", "Netcat", "Bash"],
@@ -46,9 +46,9 @@ export const PROJECTS: ProjectData[] = [
   },
   {
     id: "encrypted-password-manager",
-    category: "PASSWORD SECURITY",
+    category: "APPLIED CRYPTOGRAPHY",
     title: "Encrypted Password Manager",
-    subtitle: "A project focused on password management and encryption concepts.",
+    subtitle: "Zero-knowledge credential vault implementing AES-256-GCM and Argon2id key derivation.",
     description: "A secure credential storage vault implementing AES-256-GCM encryption, Argon2id key derivation, and entropy enforcement.",
     overview: "Designed to explore cryptographic primitives and defense against brute-force attacks, this tool manages credentials using zero-knowledge client encryption, master password key stretching, and secure memory erasure practices.",
     tools: ["Python", "Cryptography", "Argon2", "AES-256-GCM", "SQLite"],
@@ -70,15 +70,15 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-2">
           <div className="space-y-4">
-            <div className="text-lime-300 text-xs font-mono tracking-wider">
-              05 / SELECTED WORK
-            </div>
+            <span className="text-lime-300 text-xs font-mono tracking-widest uppercase">
+              Portfolio
+            </span>
             <h2 className="text-gray-100 text-4xl sm:text-5xl font-medium font-sans">
-              Learning, made tangible.
+              Featured Projects
             </h2>
           </div>
           <p className="max-w-xs text-neutral-400 text-sm font-sans leading-relaxed">
-            Three completed projects exploring different sides of cybersecurity.
+            Practical security tools, laboratory pipelines, and network telemetry utilities built from scratch.
           </p>
         </div>
 
@@ -113,8 +113,8 @@ export default function ProjectsSection({ onSelectProject }: ProjectsSectionProp
 
                   {/* Header Badge & Icon */}
                   <div className="relative z-10 p-5 flex items-center justify-between pointer-events-none">
-                    <span className="px-2.5 py-1 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-neutral-300 text-[10px] font-mono tracking-wider shadow-sm">
-                      COMPLETED PROJECT
+                    <span className="px-2.5 py-1 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-lime-300 text-[10px] font-mono tracking-wider shadow-sm">
+                      {project.category}
                     </span>
                     <div className="p-1.5 bg-neutral-950/85 backdrop-blur-md border border-zinc-800/80 text-lime-300">
                       <CardIcon className="size-4 opacity-90" />

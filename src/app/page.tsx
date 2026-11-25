@@ -27,22 +27,22 @@ export default function Home() {
         {/* Hero */}
         <Hero />
 
-        {/* 01 / ABOUT */}
+        {/* About */}
         <AboutSection />
 
-        {/* 02 / TRAINING JOURNEY */}
+        {/* Credentials & Training */}
         <TrainingSection />
 
-        {/* 03 / NEXT LEARNING OBJECTIVES */}
+        {/* Certification Roadmap */}
         <ObjectivesSection />
 
-        {/* 04 / TOOLS & SECURITY SKILLS */}
+        {/* Technical Stack */}
         <SkillsSection />
 
-        {/* 05 / SELECTED WORK */}
+        {/* Featured Projects */}
         <ProjectsSection onSelectProject={(project) => setSelectedProject(project)} />
 
-        {/* 06 / CONTACT */}
+        {/* Contact */}
         <ContactSection />
       </main>
 
